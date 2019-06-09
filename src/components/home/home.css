@@ -1,0 +1,66 @@
+
+/************ Home Banner *************/
+.home_banner{ 
+	width:100%;
+	float:left;
+	padding:150px 0 70px 0;
+	margin:0;
+	background: #4B97D4;
+	position:relative;
+}
+
+.home_banner .details{
+	width:100%;
+	max-width:775px;
+	float:left;
+	padding:0;
+	margin:0;
+	position:relative;
+	z-index:5;
+}
+
+.home_banner h2{
+	padding:0;
+	margin:0 0 33px 0;
+	font-size:30px;
+	color:#ffffff;
+	font-weight:300;
+	line-height:normal;
+}
+
+.home_banner h1{ 
+	padding:0;
+	margin:0 0 33px 0;
+	font-size:40px;
+	color:#ffffff;
+	font-weight:500;
+	line-height:normal;
+}
+
+
+.weather-btn-block a {
+	width: 230px;
+	padding: 17px 0px 17px 0px;
+	display: inline-block;
+	text-align: center;
+	border-radius: 35px;
+	-moz-border-radius: 35px;
+	-webkit-border-radius: 35px;
+	margin-top: 25px;
+	color: #4B97D4;
+	background: white;
+	font-weight: 500;
+}
+
+.weather-btn-block a {
+	font-size: 15px;
+	line-height: 15px;
+	text-decoration: none;
+}
+
+.weather-btn-block p {
+	color: white;
+	font-size:14px;
+	padding-left: 5px;
+	padding-top:7px;
+}

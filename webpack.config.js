@@ -8,7 +8,7 @@ const outputDirectory = 'dist';
 module.exports = {
   entry:
   {
-    'app': path.join(__dirname, 'src/views/app/app.js'),
+    'home': path.join(__dirname, 'src/views/home/home.js'),
   },
   output: {
     path: path.join(__dirname, outputDirectory),
