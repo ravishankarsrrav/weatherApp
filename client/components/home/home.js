@@ -18,7 +18,7 @@ class Home extends Component {
                     <h1>Accurate weather forecast <br></br> of  around 16000 cities <br></br> from worldwide
                    is available.</h1>
                     <div className="weather-btn-block">
-                    <a href="/signup" className="shadow-lg">All Cities Weather</a>
+                    <a href="/all-cities" className="shadow-lg">All Cities Weather</a>
                     <p>Find your city weather forecast by clicking above button.</p>
                     </div>
                 </div>

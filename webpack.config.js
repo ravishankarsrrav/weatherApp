@@ -10,6 +10,7 @@ module.exports = {
   {
     'home': path.join(__dirname, 'client/views/home/home.js'),
     'aboutus': path.join(__dirname, 'client/views/about-us/about-us.js'),
+    'all-cities': path.join(__dirname, 'client/views/all-cities/all-cities.js'),
   },
   output: {
     path: path.join(__dirname, outputDirectory),

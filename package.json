@@ -9,7 +9,7 @@
     "build:watch": "webpack --watch --progress --mode=development",
     "build:production": "webpack --progress -p",
     "start-server": "node server/server.js",
-    "start-server:dev" : "nodemon server/server.js"
+    "start-server:dev": "nodemon server/server.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,8 @@
   "homepage": "https://github.com/ravishankarsrrav/weatherApp#readme",
   "dependencies": {
     "express": "^4.16.3",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7",
     "react": "^16.3.1",
     "react-dom": "^16.3.1"
   },
