@@ -58,6 +58,7 @@ class City extends Component {
 
   render() {
     const { cityID, cityName, country, temperature, pressure, humidity, weather, clouds, windSpeed } = this.state;
+    const url = `/forecast/${cityID}`;
     return (
         <tr>
           	<td className='table-data'>{cityName}</td>
@@ -68,7 +69,7 @@ class City extends Component {
           	<td className='table-data'>{weather}</td>
           	<td className='table-data'>{windSpeed}</td>
           	<td className='table-data'>{clouds}</td>
-          	<td className='table-data'><button className='btn btn-sm btn-info' type='button'>Forecast</button></td>
+          	<td className='table-data'><a className='btn btn-sm btn-info' href={url} target="_blank">Forecast</a></td>
         </tr>
       );
   }    

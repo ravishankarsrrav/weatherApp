@@ -12,6 +12,7 @@ app.use('/js', express.static(path.join(__dirname, '../dist')));
 app.use('/about-us', express.static(path.join(__dirname, '../client/views/about-us/about-us.html')));
 app.use('/home', express.static(path.join(__dirname, '../client/views/home/home.html')));
 app.use('/all-cities', express.static(path.join(__dirname, '../client/views/all-cities/all-cities.html')));
+app.use('/forecast/:ID', express.static(path.join(__dirname, '../client/views/forecast/forecast.html')));
 // reqest to redirect to home
 app.get('/', (req, res, next) => {
   res.redirect('/home');
