@@ -1,4 +1,5 @@
-# Weather Application using reactJS
+# Weather Application using reactJS, NodeJs
+## Application runs in the port 8080
 
 ### Prerequisites
 
@@ -20,23 +21,36 @@ command to install all the npm packages
 npm install
 ```
 
-command to build a project in dev mode
+command to build a client in dev mode
 
 ```
 npm run build:dev
 ```
 
-command to build a project in dev watch mode
+command to build a client in dev watch mode
 
 ```
 npm run build:watch
 ```
 
 
-command to build a project in production mode
+command to build a client in production mode
 
 ```
 npm run build:production
+```
+
+
+command to run a server in port 8080
+
+```
+npm run start-server
+```
+
+command to run a server in nodemon mode in port 8080
+
+```
+npm run start-server:dev
 ```
 
 ### And coding style tests

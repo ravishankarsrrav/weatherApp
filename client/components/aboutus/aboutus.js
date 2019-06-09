@@ -25,7 +25,7 @@ class AboutUs extends Component {
             predict the conditions of the atmosphere for a given location and time. 
             People have attempted to predict the weather informally for millennia and formally since the 19th century.
             Weather forecasts are made by collecting quantitative data about the current state of the atmosphere
-            at a given place and using meteorology to project how the atmosphere will change. Random description please Ignore. </p>
+            at a given place and using meteorology to project how the atmosphere will change. Random description please Ignore.  </p>
         </div>
         <Footer/>
       </div>

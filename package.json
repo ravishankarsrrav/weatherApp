@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:dev": "webpack --progress",
     "build:watch": "webpack --watch --progress --mode=development",
-    "build:production": "webpack --progress -p"
+    "build:production": "webpack --progress -p",
+    "start-server": "node server/server.js",
+    "start-server:dev" : "nodemon server/server.js"
   },
   "repository": {
     "type": "git",

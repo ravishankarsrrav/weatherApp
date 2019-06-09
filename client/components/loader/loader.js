@@ -25,7 +25,7 @@ class Loader extends Component {
       <div className={loadingClass}>
         <div className="loading_content">
           <div className='loading-flex-center'>
-            <img src="../../../public/images/logo_small.png" />
+            <img src="/static/images/logo_small.png" />
             <div className='loadingpoints'>
               <i></i>
               <i></i>
