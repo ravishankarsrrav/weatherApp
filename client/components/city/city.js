@@ -1,46 +1,77 @@
-// Component : City
-// Desc : Row in a cities table
-// Use case : used as a row in a cities table
-
 import React, { Component } from 'react';
-import './city.css';
+import axios from 'axios';
 
-class Footer extends Component {
-	constructor() {
-		super();
-	}	
-	render() {
-		return (
-		<footer>
-		<div className="footer_sec">
-			<div className="container">
-				<div className="row">
-					<div className="col-lg-6 col-sm-6 col-xs-12 offset-md-6">
-						<ul className="social_link">
-							<li><a href="https://github.com/ravishankarsrrav"><i className="fa fa-github"></i></a></li>
-							<li><a href="https://twitter.com/ravishankar_rav"><i className="fa fa-twitter"></i></a></li>
-							<li><a href="https://www.linkedin.com/in/ravishankarsr-rav/"><i className="fa fa-linkedin"></i></a></li>
-						</ul>
-					</div>
-				</div>
-				<div className="copyright">
-					<div className="row">
-						<div className="col-lg-8 col-sm-8 col-md-8 col-xs-12 pull-right">
-							<ul className="footer_link">
-								<li><a href="/about-us">About Us</a></li>
-								<li><a href="/all-cities">All Cities</a></li>
-							</ul>
-						</div>
-						<div className="col-lg-4 col-sm-5 col-md-4 col-xs-12">
-							<p>© 2019 <span>Ravishankar S R.</span> All Right Reserved.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
-    );
+class City extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+    	cityID : this.props.id,
+      	cityName : this.props.name,
+      	country : this.props.country,
+      	temperature : "--",
+      	pressure : "--",
+      	humidity : "--",
+      	weather : "--",
+      	windSpeed : "--",
+      	clouds : "--",
+    };
+  }
+
+  componentDidMount() {
+      	this.getCityCurrentWeather();
+  	}
+
+  	getCityCurrentWeather() {
+	    const self = this;
+	    const { cityID }  = this.state;
+	    const unit = "metric";
+	    const AppID = "109b3f22786b6c3e4b3a76efb21549b1";
+	    const url = `http://api.openweathermap.org/data/2.5/weather?id=${cityID}&APPID=${AppID}&units=${unit}`;
+	    axios.get(url)
+	        .then(res => self.onGetCityCurrentWeatherSuccess(res.data))
+	        .catch(error => self.onGetCityCurrentWeatherFailure(error));
+  	}
+
+  	onGetCityCurrentWeatherSuccess(res) {
+      	this.setState({
+        	temperature : res.main.temp,
+        	pressure : res.main.pressure,
+        	humidity : res.main.humidity,
+        	weather : res.weather[0].main,
+        	windSpeed : res.wind.speed,
+        	clouds : res.clouds.all
+      	});
 	}
+
+	onGetCityCurrentWeatherFailure(error) {
+	    this.setState({
+        	temperature : "error",
+        	pressure : "error",
+        	humidity : "error",
+        	weather : "error",
+        	visibility : "error",
+        	windSpeed : "error",
+        	clouds : "error"
+      	});
+	}
+
+
+  render() {
+    const { cityID, cityName, country, temperature, pressure, humidity, weather, clouds, windSpeed } = this.state;
+    return (
+        <tr>
+          	<td className='table-data'>{cityName}</td>
+          	<td className='table-data'>{country}</td>
+          	<td className='table-data'>{temperature}</td>
+          	<td className='table-data'>{pressure}</td>
+          	<td className='table-data'>{humidity}</td>
+          	<td className='table-data'>{weather}</td>
+          	<td className='table-data'>{windSpeed}</td>
+          	<td className='table-data'>{clouds}</td>
+          	<td className='table-data'><button className='btn btn-sm btn-info' type='button'>Forecast</button></td>
+        </tr>
+      );
+  }    
 }
 
 export default City;

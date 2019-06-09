@@ -19,7 +19,7 @@ class Home extends Component {
                    is available.</h1>
                     <div className="weather-btn-block">
                     <a href="/all-cities" className="shadow-lg">All Cities Weather</a>
-                    <p>Find your city weather forecast by clicking above button.</p>
+                    <p>Find your city weather, forecast by clicking above button.</p>
                     </div>
                 </div>
               </div>
