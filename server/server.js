@@ -26,6 +26,13 @@ app.get('/api/v1/city/:start/:stop', (req, res) => {
 		"success" : true,
 	});
 });
+
+// robots.txt
+app.get('/robots.txt', (req, res) => {
+	res.type('text/plain');	
+	res.send("User-agent: *\nAllow: /* \n");
+})
+
 // request to catch undefined endpoints
 app.get('*', (req, res) => {
   res.redirect('/');
