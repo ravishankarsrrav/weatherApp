@@ -9,6 +9,7 @@ module.exports = {
   entry:
   {
     'home': path.join(__dirname, 'src/views/home/home.js'),
+    'aboutus': path.join(__dirname, 'src/views/about-us/about-us.js'),
   },
   output: {
     path: path.join(__dirname, outputDirectory),

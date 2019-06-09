@@ -27,8 +27,8 @@ class Footer extends Component {
 					<div className="row">
 						<div className="col-lg-8 col-sm-8 col-md-8 col-xs-12 pull-right">
 							<ul className="footer_link">
-								<li><a href="/terms-and-conditions">About Us</a></li>
-								<li><a href="/site-terms">Site Map</a></li>
+								<li><a href="/about-us">About Us</a></li>
+								<li><a href="/all-cities">All Cities</a></li>
 							</ul>
 						</div>
 						<div className="col-lg-4 col-sm-5 col-md-4 col-xs-12">
